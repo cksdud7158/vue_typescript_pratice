@@ -14,9 +14,9 @@ auth.useDeviceLanguage();
 
 // 테스트 시 emulator 로 신호를 보내겠다.
 if (location.hostname === "localhost") {
-  auth.useEmulator("http://localhost:6680/");
-  db.useEmulator("localhost", 7777);
-  rdb.useEmulator("localhost", 6670);
+  auth.useEmulator("http://localhost:8886/");
+  db.useEmulator("localhost", 8888);
+  rdb.useEmulator("localhost", 8887);
 }
 
 Vue.prototype.$firebase = firebase;

@@ -5,7 +5,10 @@
       <v-card-text>
         <v-text-field v-model="email" label="email"> </v-text-field
       ></v-card-text>
-      <v-card-actions> <v-btn type="submit">submit </v-btn></v-card-actions>
+      <v-card-actions>
+        <v-btn type="submit">submit </v-btn
+        ><v-btn @click="singOut">singOut </v-btn>
+      </v-card-actions>
     </v-card>
   </v-form>
 </template>
@@ -14,12 +17,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import { auth } from "@/plugins/firebase";
 
-@Component<authSign>({
+@Component<AuthSign>({
   created() {
     this.signIn();
   },
 })
-export default class authSign extends Vue {
+export default class AuthSign extends Vue {
   email = "";
 
   submit() {
@@ -55,6 +58,10 @@ export default class authSign extends Vue {
       .catch(function (error) {
         console.log(error.message);
       });
+  }
+
+  singOut() {
+    auth.signOut();
   }
 }
 </script>

@@ -10,7 +10,7 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class layoutNoraml extends Vue {}
+export default class LayoutNoraml extends Vue {}
 </script>
 
 <style lang="scss"></style>

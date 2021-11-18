@@ -3,7 +3,7 @@
   <!--  <layout-auth v-else />-->
   <v-app id="inspire">
     <v-main>
-      <v-container class="justify-center align-center fill-height">
+      <v-container>
         <layout-normal v-if="isAuth" />
         <layout-auth v-else />
       </v-container>

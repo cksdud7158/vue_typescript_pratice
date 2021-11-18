@@ -6,8 +6,11 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import "./plugins/vuetify";
 import "./plugins/firebase";
+import AuthHandler from "@/handler/auth";
 
 Vue.config.productionTip = false;
+
+new AuthHandler();
 
 new Vue({
   router,
